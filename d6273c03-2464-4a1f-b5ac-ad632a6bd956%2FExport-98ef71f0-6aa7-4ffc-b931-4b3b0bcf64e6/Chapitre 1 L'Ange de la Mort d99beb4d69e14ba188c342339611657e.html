@@ -1,0 +1,696 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Chapitre 1 : L&#x27;Ange de la Mort</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d99beb4d-69e1-4ba1-88c3-42339611657e" class="page sans"><header><img class="page-cover-image" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/DALLE_2024-05-16_21.32.30_-_A_futuristic_cityscape_of_Neo-Seoul_at_night_characterized_by_a_blend_of_advanced_technology_and_ancient_traditions._The_scene_is_enveloped_in_darkne.webp" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">1️⃣</span></div><h1 class="page-title"><strong>Chapitre 1 : L&#x27;Ange de la Mort</strong></h1><p class="page-description"></p></header><div class="page-body"><div id="25f9a618-0562-4806-bab8-1339d85ac8a6" class="column-list"><div id="bdb69660-d357-450a-abeb-d66546f620ee" style="width:50%" class="column"><h2 id="b91cd5f1-5cef-4807-b2ec-6e8b174ab517" class="block-color-red_background">Night had fallen over the city of Neo-Seoul, shrouding the streets in a veil of mystery and danger. Neon lights glowed brightly, illuminating the dark alleys and towering skyscrapers. This metropolis, a blend of advanced technology and ancient traditions, was the battleground for factions and guilds vying for power and control.</h2></div><div id="a201a273-0f06-459a-8f56-930b3f698868" style="width:50%" class="column"><figure id="d814116c-973e-48c9-98cf-9142d58ccf3c" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled.png"/></a></figure></div></div><div id="5db26b28-faf5-43fd-a58e-055662291802" class="column-list"><div id="9e2a6a30-2de1-4f5b-b500-1f2f4977d5e2" style="width:50%" class="column"><figure id="98217a1e-c82e-4095-a008-e06db130c1a5" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%201.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%201.png"/></a></figure></div><div id="1b279a97-295e-40d7-bab2-10b37e973947" style="width:50%" class="column"><h2 id="13bbc9ca-7abc-4330-bf5e-90bebd4ac032" class="block-color-red_background">In this urban labyrinth, a figure moved with deadly grace and precision. Hae-Won, nicknamed the Angel of Death, stood on the roof of an abandoned building, silently observing her targets below. With her long silver hair gently flowing in the wind and piercing blue eyes, she resembled an angel descended from the heavens, but her intentions were far from divine. Tonight&#x27;s mission was crucial for her guild, the Watchers of the Dawn.</h2></div></div><p id="507de9c0-d668-4f0d-bd4f-b4e5b04a93cf" class="">
+</p><p id="77e6eaee-7559-42cb-9181-a0a57b90ad56" class="">
+</p><div id="625f762b-a53f-4437-8071-c5bc2f019830" class="column-list"><div id="157dee4c-f468-4897-a3cf-4d2888961aab" style="width:50%" class="column"><h2 id="20ac3399-f3ac-410c-a1ff-e1acc0740fae" class="block-color-red_background">The Watchers of the Dawn were a secret guild dedicated to protecting Neo-Seoul from internal and external threats. Comprised of warriors, strategists, and technicians, they were the last line of defense against forces seeking to plunge the city into chaos.</h2><p id="0c37bf71-37f8-4a09-84e8-343d21f03fdd" class="">
+</p></div><div id="523af115-26c3-4f13-9b29-888e7c18d602" style="width:50%" class="column"><figure id="0a5268e9-f399-4fb9-9da8-c4775e6dedf8" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%202.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%202.png"/></a></figure></div></div><p id="318276f4-5982-46a7-913f-3740978f418b" class="">
+</p><p id="ee329fb5-afcd-4cb8-a501-a687dae41b8a" class="">
+</p><div id="b145a1ae-be22-48f2-9b58-0869c10dcc02" class="column-list"><div id="aaa18c1a-fb12-4d5f-94b5-7ddb7434a06a" style="width:50%" class="column"><figure id="ba6f743d-b8d1-468f-9d59-380eba6e30e3" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%203.png"><img style="width:707.9962768554688px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%203.png"/></a></figure></div><div id="ca207888-199f-4ae5-9443-5839195028e4" style="width:50%" class="column"><h2 id="3dc33851-c567-4699-9304-9477f33dbb66" class="block-color-red_background">Hae-Won adjusted her black gloves and quickly checked her equipment: a pair of perfectly balanced daggers, shurikens hidden in her belt, and a small smoke bomb for emergencies. She took a deep breath, focusing on the task ahead.</h2></div></div><p id="e896c13b-de41-4298-9c30-7f20c96bbca1" class="">
+</p><div id="0f4b063e-7ec2-4312-a0cf-299e00a257e4" class="column-list"><div id="3243d6cb-7d74-4f14-b20c-b70bdce6e028" style="width:50%" class="column"><h2 id="9ff27b6b-53cc-4904-b757-a8a133416358" class="block-color-red_background">Below, a group of traffickers was engaged in a clandestine transaction, their faces hidden by the shadows of the buildings. Hae-Won identified her primary target: a tall, burly man known as Kang the Breaker, a notorious enemy of her guild.</h2></div><div id="7867c06c-b5ef-47e3-857d-6e87184c9bc1" style="width:50%" class="column"><figure id="d95b5505-00d1-431e-85af-763e65596292" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%204.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%204.png"/></a></figure></div></div><p id="9e6461e1-9ccd-4436-92d0-fd49da03852b" class="">
+</p><div id="17a4015e-b09d-4cce-b632-4be845887cf6" class="column-list"><div id="2fde3db0-35c8-4bb7-b3d3-9dc37f4929cb" style="width:50%" class="column"><figure id="40f02f62-bee3-4783-87a7-4371cd626ed2" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%205.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%205.png"/></a></figure></div><div id="86b35054-f141-4ff9-96b6-446d79cc5508" style="width:50%" class="column"><h2 id="2322dbe2-9e61-416e-ab1f-3c8d42820da7" class="block-color-red_background">Without a sound, she leaped from the roof, her movements as fluid as a cat&#x27;s. She landed silently behind a container, her gaze fixed on Kang. The other men didn&#x27;t have time to react before Hae-Won neutralized them one by one, her daggers briefly gleaming in the neon light before vanishing into the darkness.</h2><p id="7120bfb9-b228-4657-85d4-386443a7efef" class="">
+</p></div></div><p id="87ce0153-5eea-4a6e-aab1-75b0dc6d4ce4" class="">
+</p><div id="74e5701c-5e04-4cde-b69e-40f52497dbec" class="column-list"><div id="b87e56e9-aa58-4767-9356-bdb56c957c11" style="width:50%" class="column"><h1 id="7546fcdd-67b6-40a9-b8fa-b4aaf7a2de0a" class="block-color-red_background">Kang turned, his eyes widening in surprise as he saw his men falling around him. Hae-Won stood up, her daggers dripping with the blood of her enemies. &quot;You came to the wrong party, Kang,&quot; she said in a calm but threatening voice.</h1></div><div id="9d8615f4-dce3-444f-b915-1b8f5dbfb685" style="width:50%" class="column"><figure id="f3c06b8f-3ee4-4354-9525-fe0223dc93ed" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%206.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%206.png"/></a></figure></div></div><p id="e7f4813b-582b-4be3-962c-e0c0557eacb6" class="">
+</p><p id="54874687-76e8-44e8-a13c-19e314825977" class="">
+</p><div id="ecbc5829-5013-40fc-b3aa-4205c21400d9" class="column-list"><div id="c0bfef16-fb58-4e23-bf00-faf3abd9ac20" style="width:50%" class="column"><figure id="e5ce83ab-2f58-4ce4-b1c4-f5473a34eda7" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%207.png"><img style="width:707.9962768554688px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%207.png"/></a></figure></div><div id="06d26659-03ca-43d3-ae84-998252b4f7d3" style="width:50%" class="column"><h1 id="7619ae3a-057f-43c4-9f7a-e3b4d0b6bde2" class="block-color-red_background">The ensuing fight was quick and brutal. Kang, though powerful, couldn&#x27;t match Hae-Won&#x27;s speed and agility. Within moments, she had disarmed him and pinned him to the ground, her dagger pressed against his throat. &quot;Tell your superiors that the Watchers of the Dawn will no longer tolerate their actions,&quot; she murmured before standing up and vanishing into the darkness, leaving Kang lying there, terrified and humiliated.</h1></div></div><p id="413fa0b1-6404-4cea-b08f-7d84230b3375" class="">
+</p><p id="716d32f1-19e5-4ba6-bf50-1b0f612617c2" class="block-color-red_background">A few streets away, Hae-Won met Ji-Yeon in a small tea shop, a quiet place where they liked to meet after their missions. Ji-Yeon was already there, sitting at a table with a bright smile on her face.</p><div id="3d92decc-3769-45d1-8211-b87588b36d86" class="column-list"><div id="a7fffa7f-b59d-4e32-b9b1-294a419704cf" style="width:50%" class="column"><p id="fb44079f-5deb-4bb4-98b8-8d63a731cb1d" class="block-color-red_background">&quot;Hae-Won, how did the mission go?&quot; Ji-Yeon asked cheerfully, looking up from her laptop. </p><p id="d237d272-52b2-4133-9300-6e5fe58e6266" class="block-color-red_background">&quot;As planned,&quot; Hae-Won replied, sitting down across from her. &quot;Kang got the lesson of his life.&quot; </p><p id="07155899-10dd-4a58-bb26-54c8d041eaec" class="block-color-red_background">Ji-Yeon laughed softly. &quot;I never doubted it for a second. You&#x27;re incredible.&quot; </p><p id="72ad246d-9df3-4ea1-b14b-abb24a3d9c2b" class="block-color-red_background">Hae-Won shrugged, a slight smile on her lips. &quot;Thanks, Ji-Yeon. And you, how&#x27;s the hacking into the enemy guild&#x27;s security system going?&quot; </p><p id="73044a2e-f4bd-498d-970c-c8384ea22908" class="block-color-red_background">&quot;Almost done. A few more tweaks, and we&#x27;ll be able to access their most secret information,&quot; Ji-Yeon answered, her eyes sparkling with excitement. </p><p id="1c081724-77aa-4237-b9fb-b00de158ece6" class="block-color-red_background">Hae-Won took a sip of tea, enjoying the comforting warmth of the liquid. &quot;Do you remember the first time we teamed up?&quot; she asked suddenly. </p><p id="de2d176a-e15d-45e7-ad70-eddfce074ef5" class="block-color-red_background">Ji-Yeon nodded, smiling. &quot;How could I forget? You saved my life that day.&quot; </p></div><div id="05d57160-3927-4736-8566-2036e6fa9361" style="width:50%" class="column"><figure id="38c9f637-3d0a-43dc-98a9-ef34fe80f66e" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%208.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%208.png"/></a></figure></div></div><p id="da20e929-e75b-4517-b90e-0cb1f03c3c5a" class="block-color-red_background">&quot;And since then, we&#x27;ve been inseparable,&quot; added Hae-Won, a glimmer of affection in her eyes.</p><p id="bd10719d-bb98-4cc1-9bc0-6f8426d807ef" class="">
+</p><div id="010187e0-2601-4e54-8c70-bd4831cadb2d" class="column-list"><div id="3caade9d-c24b-41f8-a043-bef811a0d7ff" style="width:50%" class="column"><figure id="146715f2-ce3e-4c07-bde3-cbc6b0e2a732" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%209.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%209.png"/></a></figure></div><div id="e8b4cc2f-4aa6-4793-b97d-9c63b221efd7" style="width:50%" class="column"><h1 id="5f20c607-4570-4e09-864a-e425295de93a" class="block-color-red_background">Together, they formed a formidable team, combining Hae-Won&#x27;s brute strength with Ji-Yeon&#x27;s strategic intelligence. Their friendship was the bond that kept them strong, ready to face any challenge Neo-Seoul could throw at them.</h1></div></div><p id="402a0b3f-c269-4da5-91b3-346141db4d25" class="">
+</p><div id="2e6064ad-5f87-4670-bb0d-9421ac66c7aa" class="column-list"><div id="de338d3e-1c8b-40f2-b542-52838754c568" style="width:50%" class="column"><h1 id="18892098-043d-4f98-9586-01bc9e078c65" class="block-color-red_background">As they finished their tea, Ji-Yeon checked her laptop one last time. &quot;I think we should check out the northern district tomorrow night. I&#x27;ve intercepted some suspicious communications there.”</h1><h1 id="0f268d7b-d6fd-44ab-9547-2638b3603ecf" class="block-color-red_background">Hae-Won nodded. &quot;We&#x27;ll be there. Together.”</h1></div><div id="3ac3150e-30dc-4a7d-a249-b9da1b5ed7a6" style="width:50%" class="column"><figure id="5cd997ce-0b98-40b2-99d4-146a09e4efb1" class="image"><a href="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%2010.png"><img style="width:1024px" src="Chapitre%201%20L&#x27;Ange%20de%20la%20Mort%20d99beb4d69e14ba188c342339611657e/Untitled%2010.png"/></a></figure></div></div><p id="56559cb0-ec3c-41ec-a694-fc09677b3a47" class="">
+</p><p id="d509c7c9-4ca7-4cec-abca-d5b3959fa53d" class="">
+</p><h1 id="c1699bf8-f134-4bd6-905f-6ead046e347a" class="block-color-red_background">The night was just the beginning. The real challenges were yet to come, and they would face them together, as always.</h1><p id="48003020-28a0-4288-aeaa-f0633cc7d001" class="">
+</p><p id="a3bac0dd-49fb-44eb-95c7-ff98df07e966" class="">
+</p><blockquote id="28f0e01b-d12c-4c04-a78e-47b34bb5fdcd" class="block-color-red_background"><strong>Chers Rim,<br/><br/><br/></strong><blockquote id="79473cef-03b9-49cc-a851-20f510db8c24" class="block-color-red_background">Nous avons terminé le chapitre 1 de notre histoire et nous aimerions savoir quelle direction vous souhaitez pour le chapitre 2. Voici vos options : </blockquote><ol type="1" id="4df255e5-6683-44d8-866b-1f780dafda79" class="block-color-red_background numbered-list" start="1"><li>Hae-Won et Ji-Yeon découvrent une conspiration dans Neo-Seoul.</li></ol><ol type="1" id="51ae3d03-25b9-4edf-b1ed-72160e3f8b17" class="block-color-red_background numbered-list" start="2"><li>Hae-Won et Ji-Yeon se battent contre des mercenaires dans le quartier nord. </li></ol><ol type="1" id="6747d9e9-0c62-42a6-b849-f8ebe78dc169" class="block-color-red_background numbered-list" start="3"><li>Un flashback révèle les origines de l&#x27;amitié entre Hae-Won et Ji-Yeon. </li></ol><ol type="1" id="25f77d07-0261-4451-a587-60ce5924ee41" class="block-color-red_background numbered-list" start="4"><li>Une nouvelle hackeuse talentueuse pourrait rejoindre leur équipe.<br/><br/></li></ol><p id="ccf5eec5-c484-42a2-b990-cc6bddeebf08" class="">
+</p><blockquote id="31f616af-5a59-48a9-a6eb-e9b52855194a" class="block-color-red_background">Votez pour votre option préférée en répondant avec le numéro correspondant (1, 2, 3 ou 4). Nous attendons vos votes avec impatience pour continuer cette aventure ensemble ! </blockquote></blockquote></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
